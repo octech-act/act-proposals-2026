@@ -1,0 +1,141 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[letterpaper,top=0.7in,bottom=0.9in,left=1in,right=1in]{geometry}
+\IfFileExists{gelasio.sty}{\usepackage{gelasio}}{\usepackage{charter}} % Georgia-metric clone (body font of both source PDFs)
+\usepackage[scaled=0.92]{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{tfrupee}
+\usepackage{graphicx,array,longtable,enumitem,xcolor,multirow}
+\graphicspath{{../assets/}}
+\usepackage{pdfpages,needspace}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\renewcommand{\arraystretch}{1.2}
+\setlist{nosep,leftmargin=2.2em}
+\setlist[itemize]{label=\textbullet}
+
+\newcommand{\rs}{{\rupee}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% ---- names (verify before submission) ----
+\newcommand{\GSname}{Prashant Srivastav}
+\newcommand{\FAname}{Dr. Hardik Jain}
+\newcommand{\ADname}{Dr. Pranay Ranjan}
+\newcommand{\Deanname}{Dr. Rajlaxmi Chouhan}
+
+% ---- file to attach: kept in data/ (gitignored, has personal details) ----
+\newcommand{\ticketfile}{../data/bitmela_ticket.pdf}
+% \attachpdf{file}{includepdf options}{placeholder text}: looks next to the .tex, then in ../assets/
+\newcommand{\attachpdf}[3]{%
+  \IfFileExists{#1}{\includepdf[#2]{#1}}{%
+  \IfFileExists{../assets/#1}{\includepdf[#2]{../assets/#1}}{%
+  \clearpage\textbf{[#3]}}}}
+
+\newcommand{\subhead}[1]{\par\needspace{3\baselineskip}{\bfseries\large #1}\par\nopagebreak}
+\newcommand{\annexure}[2]{\clearpage{\Large\bfseries Annexure #1}\qquad{\Large #2}\par\medskip}
+\newcommand{\signature}[3]{%
+  \begin{minipage}[t]{0.45\textwidth}\raggedright
+  \vspace{1.2cm}{\bfseries #1}\\ #2\\ #3\\ IIT Jodhpur\end{minipage}}
+
+\begin{document}
+\pagestyle{empty}
+
+%================ LETTERHEAD (ACT template) ================
+\begin{minipage}[c]{0.2\textwidth}
+  \includegraphics[width=1.05in]{iitj_logo.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.78\textwidth}\raggedleft
+  {\Large\bfseries General Secretary}\\
+  {\Large\bfseries Academic, Career \& Technology Council}\\
+  {\bfseries Indian Institute of Technology Jodhpur}\\
+  NH-65, Nagaur Road, Karwar, 342037, INDIA\\
+  \textit{Phone: \textcolor{blue}{8299322238}}\ \ \textbar\ \textit{E-mail: \textcolor{blue}{\href{mailto:gensecy_act@iitj.ac.in}{gensecy\_act@iitj.ac.in}}}
+\end{minipage}
+\par\vspace{2pt}\noindent\rule{\textwidth}{0.8pt}\par
+
+{\bfseries \GSname}\hfill{\bfseries IITJ/ACT/26-27/GS/019A}\\
+General Secretary, ACT Council\hfill Date: 19/10/2026
+
+{\bfseries To: Dean (Student Affairs), IIT Jodhpur}\\
+{\bfseries Through}:
+\begin{itemize}
+  \item Associate Dean (Student Affairs)
+  \item Faculty Advisor, ACT Council
+\end{itemize}
+
+{\bfseries Subject: Proposal for reimbursement of travel expenses for Bitmela Launchpad 2026 finalists}
+
+Respected Ma'am,
+
+\textbf{DevlUp Labs, IIT Jodhpur} proposes the reimbursement of travel expenses for a team of \textbf{five students of IIT Jodhpur} who have been selected as finalists in the \textbf{Bitmela Launchpad 2026}.
+
+\textbf{Bitmela} is a festival focused on the intersection of \textbf{money, technology, Bitcoin and AI}, being held in Jaipur on \textbf{30th--31st October 2026}. The Bitmela Launchpad is an ideathon in which selected teams receive mentorship and develop their ideas into working prototypes before presenting them on the main stage in Jaipur. The 2026 Launchpad has five finalist teams and provides four weeks of mentorship leading up to the final pitch.
+
+\subhead{Participation in Bitmela Launchpad}
+The IIT Jodhpur team has been selected in the \textbf{``Agentic Payments''} track of the Launchpad. The track focuses on building \textbf{AI agents capable of conducting transactions using Bitcoin, UPI, or both}, with applications including autonomous commerce, agents paying for their own compute, and machine-to-machine payments.
+
+The finalist teams present their projects on the \textbf{Bitmela main stage in Jaipur on 30th October 2026}, and the winners are announced on 31st October 2026. Participation will give the students an opportunity to \textbf{develop their project under mentorship, interact with builders, investors and industry professionals, and showcase their work on a national platform} focused on Bitcoin, AI and emerging payment technologies.
+
+The team members are:
+\begin{center}
+\begin{tabular}{|C{1.2cm}|L{6.0cm}|C{3.0cm}|}
+\hline
+\textbf{S.No.} & \textbf{Name} & \textbf{Roll No.} \\ \hline
+1 & Udayrajsinh Vala & B25MT1046 \\ \hline
+2 & Rishabh Raj & B25CM1041 \\ \hline
+3 & Tanay Bhatt & B25MT1045 \\ \hline
+4 & Ishaan Parikh & B25BB1013 \\ \hline
+5 & Hasit Chandra Koppuravuri & B25CS1019 \\ \hline
+\end{tabular}
+\end{center}
+
+\subhead{Travel details}
+\begin{itemize}
+  \item \textbf{Number of students:} 5
+  \item \textbf{Route:} Jodhpur -- Jaipur -- Jodhpur, by train in Sleeper class (SL)
+  \item \textbf{Onward journey (booked):} Train 12466 Ranthambore Express, departing Jodhpur Jn.\ at 05:00 and arriving at Jaipur Jn.\ at 09:52 on 29th October 2026 (PNR 2365167930, Annexure I)
+  \item \textbf{Return journey (to be booked):} Jaipur to Jodhpur on 1st November 2026, in the same class
+\end{itemize}
+
+\subhead{Budget}
+The onward fare is as per the ticket in Annexure I (ticket fare of \rs~1,275 for five passengers, IRCTC convenience fee of \rs~11.80 and travel insurance premium of \rs~2.25). The return fare is estimated at the same amount.
+
+\begin{center}
+\begin{tabular}{|L{6.4cm}|L{3.9cm}|C{1.8cm}|R{2.3cm}|}
+\hline
+\textbf{Item / Particulars} & \textbf{Basis} & \textbf{Students} & \textbf{Amount} \\ \hline
+Train travel, Jodhpur to Jaipur (29th October 2026) & Actual, as per ticket & 5 & \rs~1,289.05 \\ \hline
+Train travel, Jaipur to Jodhpur (1st November 2026) & Estimated, same as onward fare & 5 & \rs~1,289.05 \\ \hline
+\multicolumn{3}{|l|}{\textbf{Total}} & \textbf{\rs~2,578.10} \\ \hline
+\end{tabular}
+\end{center}
+
+Reimbursement will be claimed against the actual tickets, limited to the amount above.
+
+We request your kind consideration and approval for the reimbursement of travel expenses of \textbf{\rs~2,578.10} for the above-mentioned students for their participation in the Bitmela Launchpad 2026.
+
+\begin{flushright}
+  {\small Submitted for kind consideration}\\[1.2cm]
+  {\large\bfseries \GSname}\\
+  General Secretary\\
+  ACT Council\\
+  IIT Jodhpur
+\end{flushright}
+
+%================ SIGNATURES (ACT template) ================
+\clearpage
+\noindent\signature{\FAname}{Faculty Advisor}{ACT Council}\par
+\noindent\signature{\ADname}{Associate Dean}{Student Affairs}\par
+\noindent\signature{\Deanname}{Dean}{Student Affairs}
+
+%================ ANNEXURE I ================
+\annexure{I}{Train ticket, Jodhpur to Jaipur}
+Electronic Reservation Slip for the onward journey (PNR 2365167930) is attached on the following page.
+
+\attachpdf{\ticketfile}{pages=1,scale=0.9,pagecommand={\thispagestyle{empty}}}
+  {Place bitmela\_ticket.pdf in data/ to attach the ticket here.}
+
+\end{document}
