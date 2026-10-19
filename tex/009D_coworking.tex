@@ -1,0 +1,108 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[letterpaper,top=0.7in,bottom=1.45in,left=1in,right=1in,footskip=0.85in]{geometry}
+\IfFileExists{gelasio.sty}{\usepackage{gelasio}}{\usepackage{charter}} % Georgia-metric clone (body font of both source PDFs)
+\usepackage[scaled=0.92]{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx,array,enumitem,xcolor}
+\graphicspath{{../assets/}}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\renewcommand{\arraystretch}{1.2}
+\setlist{nosep,leftmargin=2.2em}
+\setlist[itemize]{label=\textbullet}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% ---- names (verify before submission) ----
+\newcommand{\GSname}{Prashant Srivastav}
+\newcommand{\FAIIname}{Dr. Bhivraj Suthar}
+\newcommand{\FAIIbname}{Dr. Atul Kumar}
+\newcommand{\PICname}{Dr. Kirankumar R. Hiremath}
+
+\newcommand{\signature}[3]{%
+  \begin{minipage}[t]{0.45\textwidth}\raggedright
+  \vspace{1.2cm}{\bfseries #1}\\ #2\\ #3\\ IIT Jodhpur\end{minipage}}
+
+% ---- footer: signatures of FA 1, FA 2 and GS ACT on every page ----
+\newcommand{\footsig}[2]{\begin{minipage}[t]{0.31\textwidth}\centering\footnotesize
+  \rule{0.85\linewidth}{0.4pt}\\[1pt]{\bfseries #1}\\ #2\end{minipage}}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footsig{\FAIIname}{Faculty Advisor, Inter IIT}\hfill
+  \footsig{\FAIIbname}{Faculty Advisor, Inter IIT}\hfill
+  \footsig{\GSname}{General Secretary, ACT Council}}
+
+\begin{document}
+
+%================ LETTERHEAD (ACT template) ================
+\begin{minipage}[c]{0.2\textwidth}
+  \includegraphics[width=1.05in]{iitj_logo.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.78\textwidth}\raggedleft
+  {\Large\bfseries General Secretary}\\
+  {\Large\bfseries Academic, Career \& Technology Council}\\
+  {\bfseries Indian Institute of Technology Jodhpur}\\
+  NH-65, Nagaur Road, Karwar, 342037, INDIA\\
+  \textit{Phone: \textcolor{blue}{8299322238}}\ \ \textbar\ \textit{E-mail: \textcolor{blue}{\href{mailto:gensecy_act@iitj.ac.in}{gensecy\_act@iitj.ac.in}}}
+\end{minipage}
+\par\vspace{2pt}\noindent\rule{\textwidth}{0.8pt}\par
+
+{\bfseries \GSname}\hfill{\bfseries IITJ/ACT/26-27/GS/009D}\\
+General Secretary, ACT Council\hfill Date: 19/10/2026
+
+{\bfseries To: Professor-in-Charge (Library), IIT Jodhpur}\\
+{\bfseries Through}:
+\begin{itemize}
+  \item Faculty Advisors, Inter IIT Tech Meet
+\end{itemize}
+
+{\bfseries Subject: Request for co-working space in the Library for the Inter IIT Tech Meet 15.0 contingent}
+
+Respected Sir,
+
+The IIT Jodhpur contingent of up to 91 students is preparing for the \textbf{Inter IIT Tech Meet 15.0}, to be hosted by IIT Guwahati from 11th to 14th December 2026. The Problem Statements are being released from October onwards, and the teams will work on them, hold regular meetings and rehearse their final presentations over the coming weeks. A common space where the teams can work and meet together is essential for this preparation.
+
+The use of the Library meeting room and co-working spaces for the preparation of the contingent was first discussed with \PICname, Professor-in-Charge (Library), during the 59th Library Committee meeting. The specifics were subsequently discussed with the Professor-in-Charge and the Assistant Librarian, Chunni Chhatwani, and the use of the following spaces in the Library was agreed upon:
+
+\begin{center}
+\begin{tabular}{|L{4.2cm}|L{9.6cm}|}
+\hline
+\textbf{Space} & \textbf{Purpose} \\ \hline
+Discussion room & Mock presentations of the teams and meetings of the contingent \\ \hline
+Adjoining rooms & Co-working space for the teams working on the Problem Statements \\ \hline
+\end{tabular}
+\end{center}
+
+\textbf{Period of use:} 21st October 2026 to 10th December 2026, the last day before the contingent travels to IIT Guwahati, during the timings permitted by the Library.
+
+\textbf{Occupancy:} As the teams work in turns, at most 30 members of the contingent will use the spaces at any given time.
+
+\textbf{Requirements:}
+\begin{itemize}
+  \item A projector in the discussion room for the mock presentations.
+  \item Charging points for laptops and devices in the discussion room and the co-working rooms.
+  \item Seating for up to 30 members, for meetings and individual work.
+\end{itemize}
+
+\textbf{Responsibility:} The Contingent Leader and the Deputy Contingent Leaders will be responsible for the use of the spaces, and will share the list of contingent members with the Library staff for access. The contingent will follow the rules of the Library, keep the spaces clean, take care of the furniture and equipment, and vacate the rooms when they are needed for other Library activities.
+
+We request your kind approval for the use of the above spaces by the Inter IIT Tech Meet 15.0 contingent for the period mentioned.
+
+\begin{flushright}
+  {\small Submitted for kind consideration}\\[1.2cm]
+  {\large\bfseries \GSname}\\
+  General Secretary\\
+  ACT Council\\
+  IIT Jodhpur
+\end{flushright}
+
+%================ SIGNATURES ================
+\noindent\signature{\FAIIname}{Faculty Advisor}{Inter IIT Tech Meet}\hfill
+\signature{\FAIIbname}{Faculty Advisor}{Inter IIT Tech Meet}\par
+\noindent\signature{\PICname}{Professor-in-Charge}{Library}
+
+\end{document}
