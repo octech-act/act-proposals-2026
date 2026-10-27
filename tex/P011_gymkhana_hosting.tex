@@ -1,0 +1,127 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[letterpaper,top=0.7in,bottom=0.9in,left=1in,right=1in]{geometry}
+\IfFileExists{gelasio.sty}{\usepackage{gelasio}}{\usepackage{charter}} % Georgia-metric clone (body font of both source PDFs)
+\usepackage[scaled=0.92]{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{tfrupee}
+\usepackage{graphicx,array,longtable,enumitem,xcolor,multirow}
+\graphicspath{{../assets/}}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\renewcommand{\arraystretch}{1.2}
+\setlist{nosep,leftmargin=2.2em}
+\setlist[itemize]{label=\textbullet}
+
+\newcommand{\rs}{{\rupee}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% ---- names (verify before submission) ----
+\newcommand{\PresName}{Rudra Gupta}
+\newcommand{\ADname}{Dr. Pranay Ranjan}
+\newcommand{\Deanname}{Dr. Rajlaxmi Chouhan}
+
+\newcommand{\subhead}[1]{\par\needspace{4\baselineskip}{\bfseries #1}\par\nopagebreak}
+\newcommand{\annexure}[2]{\clearpage{\Large\bfseries Annexure #1}\qquad{\Large #2}\par\medskip}
+\newcommand{\signature}[3]{%
+  \begin{minipage}[t]{0.45\textwidth}\raggedright
+  \vspace{1.2cm}{\bfseries #1}\\ #2\\ #3\\ IIT Jodhpur\end{minipage}}
+
+\begin{document}
+\pagestyle{empty}
+
+%================ LETTERHEAD ================
+\begin{minipage}[c]{0.2\textwidth}
+  \includegraphics[width=1.05in]{iitj_logo.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.78\textwidth}\raggedleft
+  {\Large\bfseries President}\\
+  {\Large\bfseries Student Gymkhana}\\
+  {\bfseries Indian Institute of Technology Jodhpur}\\
+  NH-65, Nagaur Road, Karwar, 342037, INDIA\\
+  \textit{E-mail: \textcolor{blue}{\href{mailto:president_gymkhana@iitj.ac.in}{president\_gymkhana@iitj.ac.in}}}
+\end{minipage}
+\par\vspace{2pt}\noindent\rule{\textwidth}{0.8pt}\par
+
+{\bfseries \PresName}\hfill{\bfseries IITJ/Gymkhana/26-27/P/011}\\
+President, Student Gymkhana\hfill Date: 27/10/2026
+
+{\bfseries To: Dean (Student Affairs), IIT Jodhpur}\\
+{\bfseries Through}: Associate Dean (Student Affairs)
+
+{\bfseries Subject: Approval for a virtual private server to host the Student Gymkhana digital services}
+
+Respected Ma'am,
+
+With respect to the mentioned subject, the Student Gymkhana is developing a set of student-facing digital services, to be built and launched in phases:
+\begin{itemize}
+  \item \textbf{Institute-wide student app:} a single app, with Institute sign-in, that organises the large volume of Institute mails into categories such as academics, placements, clubs, sports, festivals, opportunities and deadlines; lets each student choose which categories notify them, while critical Institute alerts always reach everyone; picks out dates, venues, registration links and deadlines and adds them to a personal calendar with reminders; and shows a short summary with a link to the original mail. The app will also provide lost and found, and a channel to raise grievances.
+  \item \textbf{Inventory system:} a central record of the assets in the berms and student activity spaces of every council, society and club, including their issue, return and condition.
+  \item \textbf{Student Gymkhana website:} the official source of information on the councils, clubs, office bearers, events and festivals of the Student Gymkhana.
+\end{itemize}
+These services need to be hosted on a reliable server that students can reach both on and off campus, and that remains with the Student Gymkhana across tenures.
+
+I would therefore like to request approval for the purchase of one virtual private server (VPS), on which all the services will be hosted together. All their components, including the databases, search, file storage and background services, will be self-hosted on this server, so that no other paid service is required and all data stays on a single server under the control of the Student Gymkhana.
+
+\subhead{Proposed server}
+\begin{center}
+\begin{tabular}{|L{4.6cm}|L{8.8cm}|}
+\hline
+\textbf{Particulars} & \textbf{Details} \\ \hline
+Provider and plan & Hostinger, VPS hosting, plan KVM 8 \\ \hline
+Processor and memory & 8 vCPU cores, 32 GB RAM \\ \hline
+Storage and bandwidth & 400 GB NVMe disk, 32 TB bandwidth \\ \hline
+Included & Full root access, dedicated IP address, free weekly backups, free domain for one year \\ \hline
+Term and billing & 12 months, paid once in advance \\ \hline
+\end{tabular}
+\end{center}
+
+\subhead{Cost}
+\begin{center}
+\begin{tabular}{|L{8.4cm}|R{2.8cm}|}
+\hline
+\textbf{Particulars} & \textbf{Amount} \\ \hline
+Hostinger KVM 8, 12 months (\rs~2,519 per month) & \rs~30,228 \\ \hline
+GST (18\%) & \rs~5,441 \\ \hline
+\textbf{Total, paid once} & \textbf{\rs~35,669} \\ \hline
+\end{tabular}
+\end{center}
+The amount will be met from the recurring budget of the office of the President and Vice President for 2026-27 (\rs~1,50,000), and will be paid online at the time of purchase and settled against the GST invoice as per Institute procedure.
+
+\subhead{Justification}
+\begin{itemize}
+  \item \textbf{One payment for the year:} the entire term is paid once in advance, so there is no monthly bill to manage, and the services are not interrupted by a missed payment. The plan renews at \rs~4,699 per month after the term, which will be proposed separately before it ends.
+  \item \textbf{Single server for all services:} 8 vCPU cores and 32 GB RAM are sufficient to run all the services together, each in its own container with its own database. Self-hosting every component avoids separate subscriptions for databases, search or storage.
+  \item \textbf{Room to grow:} the 400 GB disk accommodates the databases, uploaded photographs and documents, and backups, as the services are added in phases.
+\end{itemize}
+
+\subhead{Undertakings}
+On behalf of the Student Gymkhana, we assure the following:
+\begin{itemize}
+  \item The server will be purchased with the official e-mail of the President, Student Gymkhana, so that it remains with the office and is handed over, with all credentials, at the end of every tenure.
+  \item Administrator access will be limited to two named student maintainers and the President.
+  \item Personal details, grievances and other sensitive records will be accessible only to authorised users, and will not be shared with any third party.
+  \item Regular backups will be maintained, in addition to the weekly backups provided with the plan.
+  \item The GST invoice and the details of the purchase will be submitted to the office of Student Affairs.
+\end{itemize}
+
+We therefore kindly request you to approve the purchase of the Hostinger KVM 8 virtual private server for 12 months at \textbf{\rs~35,669}, so that the digital services of the Student Gymkhana can be hosted and made available to the students at the earliest.
+
+%================ SIGNATURES ================
+\clearpage
+\begin{flushright}
+  {\small Submitted for kind consideration}\\[1.2cm]
+  {\large\bfseries \PresName}\\
+  President\\
+  Student Gymkhana\\
+  IIT Jodhpur
+\end{flushright}
+
+\noindent\signature{\ADname}{Associate Dean}{Student Affairs}\par
+\noindent\signature{\Deanname}{Dean}{Student Affairs}
+
+\end{document}
